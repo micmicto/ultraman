@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Textures - A-Frame School</title>
+    <meta name="description" content="Textures - A-Frame School">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+    
+    <script>
+    AFRAME.registerComponent('cajaverde', {
+      init: function() {
+        this.el.addEventListener("click", (e) => {
+          let aparecer = document.querySelector("#cajaroja")
+          aparecer.setAttribute("visible", !aparecer.getAttribute("visible"))
+        })
+      }
+    })
+    </script>
+    
+  </head>
+  <body>
+    <style>
+      
+    </style>
+    
+    <a-scene cursor="rayOrigin: mouse">
+      <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+      <a-asset-item id="textura" src="https://cdn.glitch.com/b870d9ec-1139-44f9-b462-223e4a2c74e7%2Fcone.jpg?v=1490308535937"></a-asset-item>
+      <a-asset-item id="gameboy" src=""></a-asset-item>
+      </a-assets>
+     
+      
+      <a-entity wu id="whats up" text-geometry="value: What's up?; font: #optimerBoldFont; size: 0.3" material="color: #b51628" position="-1 3.4 -2 "></a-entity>
+      <a-entity id="mitsubosho" text-geometry="value: Mitsubosho; font: #optimerBoldFont; size: 0.3" material="color: #213ced" position="1 2.3 4 " rotation="0 180 0"></a-entity>
+      <a-box caja id="cajaroja" color="#b51628" depth=".1" height="1" width="0.9" position="1 2.6 -2"></a-box>
+      <a-box caja id="cajaverde" color="#44cf67" depth=".1" height="1" width="0.9" position="-0.5 2.6 -2"></a-box>
+      <a-entity id="ultraman" text-geometry="value: Ultraman es la onda; font: #optimerBoldFont; size: 0.1" material="color: #b51628" position="-0.5 1.5 -1.94"></a-entity>
+            
+      
+      <a-sky src="https://cdn.glitch.com/0c64e708-c972-4788-b9cc-077e393287b6%2Fultra%20man%20statue.jpg?v=1572374924950" rotation="0 -90 0"></a-sky>
+      
+      <!-- 
+      
+      <a-box src="" position="-2 0.5 -4"></a-box>
+      <a-sphere src="" radius="0.5" position="0 0.5 -3"></a-sphere>
+      <a-cone src="" height="2" radius-top="0.1" position="0 1 -6"></a-cone>
+      <a-box src="" position="2 0.5 -4"></a-box>
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="point" intensity="2" position="2 4 4"></a-light>
+      //-->
+      
+    </a-scene>
+    
+    <script>
+        
+    </script>
+
+  </body>
+</html>
